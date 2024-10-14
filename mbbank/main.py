@@ -58,8 +58,9 @@ class MBBank:
             self.proxy = {}
         self.ocr_class = TesseractOCR()
         if ocr_class is not None:
-            if not isinstance(ocr_class, CapchaProcessing):
-                raise ValueError("ocr_class must be instance of CapchaProcessing")
+            # For Captcha API solver class
+            # if not isinstance(ocr_class, CapchaProcessing):
+                # raise ValueError("ocr_class must be instance of CapchaProcessing")
             self.ocr_class = ocr_class
         self.sessionId = None
         self._userinfo = None
